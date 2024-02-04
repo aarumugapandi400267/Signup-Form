@@ -6,7 +6,7 @@ import {promisify} from 'util'
 const writeFilePromise = promisify(fs.writeFile);
 
 const downLoadXlsx=async (req, res) => {
-    const columns = ['Firstname','Lastname','Gender','DateOfBirth','Address','City','Taluk',
+    const columns = ['FirstName','LastName','Gender','DateOfBirth','Address','City','Taluk',
     'District','State','Pincode','StudentPhone','ParentPhone','Email','SchoolName',
     'SchoolType','EducationLevel','StudyMedium','SchoolLocation','ScholarShip','Sport','SportLevel',
   ];
