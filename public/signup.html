@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+		.mainform{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+			gap: 3em;
+			
+		}
+		.wrap-login100{
+			justify-content: center;
+		}
+		body::-webkit-scrollbar{
+			display: none;
+		}
+		input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+			display: none;
+		}
+		textarea{
+			resize: none;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				
+				<form action="/register" method="post">
+					<span class="login100-form-title">
+						Student Information
+					</span>
+					<div class="mainform" >
+						<div class="wrap-input100 validate-input" data-validate = "Valid First name is required">
+							<input class="input100" type="text" name="firstname" placeholder="First name" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</span>
+						</div>
+						<!-- <div class="wrap-input100 ">
+							<input class="input100" type="text" name="username" placeholder="Middle name">
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</span>
+						</div> -->
+						<div class="wrap-input100 validate-input" data-validate = "Valid Last name is required">
+							<input class="input100" type="text" name="lastname" placeholder="Last name" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</span>
+						</div>
+	
+						<div class="wrap-input100 validate-input" data-validate="Please select your gender">
+							<select class="input100" name="gender" id="gender" required>
+								<option value="" disabled selected>Select your gender</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+								<option value="other">Other</option>
+							</select>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-venus-mars" aria-hidden="true"></i>
+							</span>
+						</div>
+						
+						
+						<div class="wrap-input100 validate-input" data-validate = "DoB is required" >
+							<input class="input100" type="date" name="dob" placeholder="DoB" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-calendar" aria-hidden="true"></i>
+							</span>
+						</div>
+						
+						<div class="wrap-input100 validate-input" data-validate = "Address is required" >
+							<textarea class="input100" name="address" placeholder="Address" required></textarea>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-address-card-o" aria-hidden="true"></i>
+							</span>
+						</div>
+	
+						<div class="wrap-input100 validate-input" data-validate="Please select your State">
+							<select class="input100" name="state" required>
+								<option value="" disabled selected>Select your State</option>
+								<option value="Tmailnadu">Tamilnadu</option>
+							</select>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</span>
+						</div>
+	
+						<div class="wrap-input100 validate-input" data-validate="Please select your District">
+							<select class="input100" name="district" id="district" required>
+								<option value="" disabled selected>Select your District</option>
+								<option value="salem">Salem</option>
+								<option value="erode">Erode</option>
+								<option value="namakkal">Namakkal</option>
+							</select>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</span>
+						</div>
+						
+						<div class="wrap-input100 validate-input" data-validate = "Enter Your Taluk">
+							<input class="input100" type="text" name="taluk" placeholder="Taluk" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</span>
+						</div>
+
+						<div class="wrap-input100 validate-input" data-validate = "Enter Your City">
+							<input class="input100" type="text" name="city" placeholder="City" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</span>
+						</div>
+						
+						<div class="wrap-input100 validate-input" data-validate = "Enter Pincode">
+							<input class="input100" type="number" name="pincode" placeholder="Pincode" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</span>
+						</div>
+					</div>
+					<br><br>
+					<span class="login100-form-title">
+						Contact Information
+					</span>
+					<div class="mainform">
+						<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+							<input class="input100" type="email" name="email" placeholder="E-Mail" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+							</span>
+						</div>
+
+						<div class="wrap-input100 validate-input" data-validate = "Enter phone number">
+							<input class="input100" type="number" name="studentphone" placeholder="Student Phone Number" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+							</span>
+						</div>
+						
+						<div class="wrap-input100 validate-input" data-validate = "Enter phone number">
+							<input class="input100" type="number" name="parentphone" placeholder="Parent's Phone" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-phone-square" aria-hidden="true"></i>
+							</span>
+						</div>
+					</div>
+					<br><br>
+					<span class="login100-form-title">
+						Schooling Information
+					</span>
+					<div class="mainform">
+						<div class="wrap-input100 validate-input" data-validate = "Enter Your School Name">
+							<input class="input100" type="text" name="schoolname" placeholder="School Name" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-building-o" aria-hidden="true"></i>
+							</span>
+						</div>
+
+						<div class="wrap-input100 validate-input" data-validate="Please select Your Education Level">
+							<select class="input100" name="educationlevel" required>
+								<option value="" disabled selected>Select your Education Level </option>
+								<option value="Primary">Primary</option>
+								<option value="Secondary">Secondary</option>
+								<option value="Higher Secondary">Higher Secondary</option>
+							</select>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</span>
+						</div>
+
+						<div class="wrap-input100 validate-input" data-validate="Please select Your School Type">
+							<select class="input100" name="schooltype" required>
+								<option value="" disabled selected>Select your School Type</option>
+								<option value="Government">Government</option>
+								<option value="CBSC">CBSC</option>
+								<option value="Metric">Metric</option>
+							</select>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</span>
+						</div>
+
+						<div class="wrap-input100 validate-input" data-validate="Please select Your Study Medium">
+							<select class="input100" name="studymedium" required>
+								<option value="" disabled selected>Select your Study Medium</option>
+								<option value="English Medium">English Medium</option>
+								<option value="Tamil Medium">Tamil Medium</option>
+							</select>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+							</span>
+						</div>
+
+						<div class="wrap-input100 validate-input" data-validate = "Enter Your School Placed">
+							<textarea class="input100" type="text" name="schoollocation" placeholder="School Location" required></textarea>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-address-card-o" aria-hidden="true"></i>
+							</span>
+						</div>
+
+					</div>
+					<br><br>
+					<span class="login100-form-title">
+						Scholarship Information
+					</span>
+					<div class="mainform">
+						<div class="wrap-input100 validate-input" data-validate="Please select Your Scholarship">
+							<select class="input100" name="scholarship" required>
+								<option value="" disabled selected>Do you have Scholarship?</option>
+								<option value="No">No</option>
+								<option value="FG">First Graduate</option>
+								<option value="SC/ST">SC/ST</option>
+								<option value="7.5">7.5</option>
+							</select>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-certificate" aria-hidden="true"></i>
+							</span>
+						</div>
+					</div><br><br>
+					<span class="login100-form-title">
+						Sports Information
+					</span>
+					<div class="mainform">
+						<div class="wrap-input100 validate-input" data-validate = "Enter ">
+							<input class="input100" type="text" name="sports" placeholder="Sports. If Not,Enter <No>" required>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-trophy" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div class="wrap-input100 validate-input" data-validate="Please select Your Sports Level">
+							<select class="input100" name="sportlevel" required>
+								<option value="" disabled selected>Max. Achieved</option>
+								<option value="No">No</option>
+								<option value="State">State</option>
+								<option value="Divisional">Divisional</option>
+								<option value="National">National</option>
+							</select>
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa fa-certificate" aria-hidden="true"></i>
+							</span>
+						</div>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Register
+						</button>
+					</div>
+                    <br><br>
+					<div class="text-center p-t-136">
+						<a class="txt2" href="./index.html">
+							<i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
+							Login into your account
+						</a>
+					</div>
+					
+
+				</form>
+				
+				<form action="/download-excel">
+					<div class="container-login100-form-btn">
+						Download the Sample Template for Bulk Data Registration<br><br>
+						<button type="submit" class="login100-form-btn">
+							Download
+						</button>
+					</div>
+				</form>
+				<form action="/upload-excel" method="post" enctype="multipart/form-data">
+					<div class="container-login100-form-btn">
+						<input class="input100" type="file" name="fileUpload"  accept=".xlsx" ><br><br>
+						<button type="submit" class="login100-form-btn">
+							Upload
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+
+</body>
+</html>
