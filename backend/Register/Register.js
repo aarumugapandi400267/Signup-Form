@@ -15,7 +15,6 @@ const RegisterFun= async (req, res) => {
         schoollocation,scholarship,sports,sportlevel
       } = req.body;
 
-      console.log(dob)
       const verificationToken = randomBytes(20).toString('hex');
       
       let isAlreadyVerified= await collection.findOne({Email:email})

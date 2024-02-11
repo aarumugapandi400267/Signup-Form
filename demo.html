@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Event Example</title>
+</head>
+<body>
+
+<label for="myInput">Type something:</label>
+<input type="text" id="myInput">
+
+<p id="output">Output will be displayed here.</p>
+
+<script>
+    // Get the input element
+    var inputElement = document.getElementById('myInput');
+
+    // Add an event listener for the 'input' event
+    inputElement.addEventListener('input', function(event) {
+        // This function will be called whenever the input value changes
+        var inputValue = event.target.value;
+
+        // Display the input value in a paragraph
+        document.getElementById('output').textContent = 'You typed: ' + inputValue;
+    });
+</script>
+
+</body>
+</html>
